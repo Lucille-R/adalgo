@@ -5,7 +5,7 @@ VARIABLES
 
 DEBUT
 	POUR i ← 1 à n
-		AFFICHER n
+		AFFICHER i
 	FIN POUR
 FIN
 ```
