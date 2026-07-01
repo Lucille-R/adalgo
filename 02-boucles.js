@@ -8,7 +8,8 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
+  for (let i = 1; i <= n; i++)
+    console.log(n)
 }
 
 /**
