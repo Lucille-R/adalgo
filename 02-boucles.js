@@ -19,7 +19,11 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
 }
 
 /**
