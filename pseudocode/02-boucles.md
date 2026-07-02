@@ -23,3 +23,16 @@ DEBUT
 	FIN POUR
 FIN
 ```
+
+# EXO 3 - somme(n)
+```text
+VARIABLES
+	i, n, somme : ENTIER
+
+DEBUT
+	somme ← 0
+	POUR i ← 1 à n
+		somme = somme + i
+	FIN POUR
+FIN
+```

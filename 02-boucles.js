@@ -9,7 +9,7 @@
  */
 export const compterJusqua = (n) => {
   for (let i = 1; i <= n; i++)
-    console.log(i)
+    console.log(i);
 }
 
 /**
@@ -34,8 +34,14 @@ export const afficherPairs = (n) => {
  * @example somme(5) → 15  (1+2+3+4+5)
  */
 export const somme = (n) => {
-  // à compléter
+  let somme = 0;
+
+  for (let i = 1; i <= n; i++) {
+    somme = somme + i;
+  }
+  return somme;
 }
+console.log(somme(1))
 
 /**
  * Retourne le produit de tous les entiers de 1 à n (factorielle).
