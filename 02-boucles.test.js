@@ -50,7 +50,15 @@ describe("produit", () => {
 // Même pattern que somme — à toi.
 // Cas à couvrir : compterPairs(10) → 5, compterPairs(7) → 3, compterPairs(1) → 0.
 describe("compterPairs", () => {
-  // à compléter
+  it("retourne 5 pour n=10", () => {
+    expect(compterPairs(10)).toBe(5)
+  })
+  it("retourne 3 pour n=7", () => {
+    expect(compterPairs(7)).toBe(3)
+  })
+  it("retourne 0 pour n=1", () => {
+    expect(compterPairs(1)).toBe(0)
+  })
 })
 
 // Pattern 3 : boucle + construction de tableau → .toEqual() sur un tableau.
