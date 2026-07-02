@@ -36,3 +36,16 @@ DEBUT
 	FIN POUR
 FIN
 ```
+
+# EXO 4 - produit(n)
+```text
+VARIABLES
+	i, n, produit : ENTIER
+
+DEBUT 
+	produit ← 1
+	POUR i ← 1 à n
+		produit = produit * i
+	FIN POUR
+FIN
+```

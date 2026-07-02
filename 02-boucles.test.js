@@ -36,7 +36,15 @@ describe("somme", () => {
 // Même pattern que somme — à toi.
 // Cas à couvrir : produit(5) → 120, produit(1) → 1, produit(0) → 1.
 describe("produit", () => {
-  // à compléter
+  it("retourne 120 pour n=5", () => {
+    expect(produit(5)).toBe(120)
+  })
+  it("retourne 1 pour n=1", () => {
+    expect(produit(1)).toBe(1)
+  })
+  it("retourne 1 pour n=0", () => {
+    expect(produit(0)).toBe(1)
+  })
 })
 
 // Même pattern que somme — à toi.

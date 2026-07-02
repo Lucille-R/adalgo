@@ -41,7 +41,6 @@ export const somme = (n) => {
   }
   return somme;
 }
-console.log(somme(1))
 
 /**
  * Retourne le produit de tous les entiers de 1 à n (factorielle).
@@ -52,7 +51,12 @@ console.log(somme(1))
  * @example produit(0) → 1
  */
 export const produit = (n) => {
-  // à compléter
+  let produit = 1;
+
+  for (let i = 1; i <= n; i++) {
+    produit = produit * i;
+  }
+  return produit;
 }
 
 /**
