@@ -87,8 +87,16 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  // à compléter
+  let tableau = []
+  let multiple;
+
+  for (let i = 1; i <= n; i++) {
+    multiple = i * n;
+    tableau.push(multiple);
+  }
+  return tableau;
 }
+
 
 /**
  * Retourne un tableau contenant tous les multiples de n inférieurs ou égaux à limite.

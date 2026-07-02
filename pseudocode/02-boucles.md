@@ -32,7 +32,7 @@ VARIABLES
 DEBUT
 	somme ← 0
 	POUR i ← 1 à n
-		somme = somme + i
+		somme ← somme + i
 	FIN POUR
 	RETOURNER somme
 FIN
@@ -46,7 +46,7 @@ VARIABLES
 DEBUT 
 	produit ← 1
 	POUR i ← 1 à n
-		produit = produit * i
+		produit ← produit * i
 	FIN POUR
 	RETOURNER produit
 FIN
@@ -65,5 +65,19 @@ DEBUT
 		FIN SI
 	FIN POUR
 	RETOURNER compteur
+FIN
+```
+
+# EXO 6 - table(n)
+```text
+VARIABLES 
+	i, n, multiple : ENTIER
+	tableau : ENTIER[n]
+
+DEBUT
+	POUR i ← 1 à n
+		multiple ← i * n
+		AJOUTER multiple A tableau
+	FIN POUR
 FIN
 ```
