@@ -79,21 +79,22 @@ DEBUT
 		multiple ← i * n
 		AJOUTER multiple A tableau
 	FIN POUR
+	RETOURNER tableau
 FIN
 ```
 
 # EXO 7 - multiplesJusqua(n, limite)
 ```text
 VARIABLES
-	i, n, multiple, limite : ENTIER
-	tableau : ENTIER[n]
+	n, limite, compteur, multiple,: ENTIER
+	tableauJ : ENTIER[n]
 
 DEBUT
-	TANT QUE n <= limite
-		POUR i ← 1 à n FAIRE
-			multiple ← i * n
-			AJOUTER multiple A tableau
-		FIN POUR
+	TANT QUE (compteur * n) <= limite
+		multiple ← compteur * n
+		AJOUTER multiple A tableauJ
+		compteur ← compteur + 1
 	FIN TANT QUE
+	RETOURNER tableauJ
 FIN
 ```
