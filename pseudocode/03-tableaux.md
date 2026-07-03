@@ -64,11 +64,27 @@ VARIABLES
 
 DEBUT
 	POUR i ← 0 à taille-1 FAIRE
-	SI tableau[i] == valeur ALORS
-		RETOURNE true
-	SINON
-		RETOURNE false
-	FIN SI
+		SI tableau[i] == valeur ALORS
+			RETOURNE true
+		FIN SI
 	FIN POUR
+	RETOURNE false
+FIN
+```
+
+# EXO 5 - compter(tableau, valeur)
+```text
+VARIABLES
+	i, valeur, compteur : ENTIER
+	tableau : ENTIER[taille]
+
+DEBUT
+	compteur ← 0
+	POUR i ← 0 à taille-1 FAIRE
+		SI tableau[i] == valeur ALORS
+			compteur ← compteur + 1
+		FIN SI
+	FIN POUR
+	RETOURNE compteur
 FIN
 ```

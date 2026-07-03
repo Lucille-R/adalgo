@@ -58,7 +58,6 @@ export const moyenne = (tableau) => {
   }
   return moyenneTab;
 }
-console.log(moyenne([]))
 
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
@@ -76,7 +75,7 @@ export const contient = (tableau, valeur) => {
   }
   return false;
 }
-console.log(contient([1, 2, 3], 2))
+
 /**
  * Retourne le nombre de fois que la valeur apparaît dans le tableau.
  * @param {any[]} tableau
@@ -85,7 +84,14 @@ console.log(contient([1, 2, 3], 2))
  * @example compter([1, 2, 2, 3, 2], 2) → 3
  */
 export const compter = (tableau, valeur) => {
-  // à compléter
+  let compteur = 0;
+  
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      compteur++;
+    }
+  }
+  return compteur;
 }
 
 /**
