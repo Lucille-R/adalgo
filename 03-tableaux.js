@@ -43,8 +43,23 @@ export const minimum = (tableau) => {
  * @example moyenne([2, 4, 6]) → 4 / moyenne([]) → null
  */
 export const moyenne = (tableau) => {
-  // à compléter
+  let total = 0;
+  let compteur = 0;
+  let moyenneTab = null;
+
+  for(let i = 0; i < tableau.length; i++) {
+    total = total + tableau[i];
+    compteur++;
+  }
+  if (tableau.length === 0) {
+    return moyenneTab;
+  } else {
+    moyenneTab = total / compteur;
+  }
+  return moyenneTab;
 }
+console.log(moyenne([]))
+
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
  * Sans utiliser .includes().
