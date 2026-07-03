@@ -4,7 +4,7 @@ VARIABLES
 	i, n : ENTIER
 
 DEBUT
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		AFFICHER i
 	FIN POUR
 FIN
@@ -16,7 +16,7 @@ VARIABLES
 	i, n : ENTIER
 
 DEBUT
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		SI i % 2 = 0 ALORS
 			AFFICHER i
 		FIN SI
@@ -31,7 +31,7 @@ VARIABLES
 
 DEBUT
 	somme ← 0
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		somme ← somme + i
 	FIN POUR
 	RETOURNER somme
@@ -45,7 +45,7 @@ VARIABLES
 
 DEBUT 
 	produit ← 1
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		produit ← produit * i
 	FIN POUR
 	RETOURNER produit
@@ -59,7 +59,7 @@ VARIABLES
 
 DEBUT
 	compteur ← 0
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		SI i % 2 = 0 ALORS
 			compteur ← compteur + 1
 		FIN SI
@@ -75,9 +75,25 @@ VARIABLES
 	tableau : ENTIER[n]
 
 DEBUT
-	POUR i ← 1 à n
+	POUR i ← 1 à n FAIRE
 		multiple ← i * n
 		AJOUTER multiple A tableau
 	FIN POUR
+FIN
+```
+
+# EXO 7 - multiplesJusqua(n, limite)
+```text
+VARIABLES
+	i, n, multiple, limite : ENTIER
+	tableau : ENTIER[n]
+
+DEBUT
+	TANT QUE n <= limite
+		POUR i ← 1 à n FAIRE
+			multiple ← i * n
+			AJOUTER multiple A tableau
+		FIN POUR
+	FIN TANT QUE
 FIN
 ```

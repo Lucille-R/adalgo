@@ -87,7 +87,7 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  let tableau = []
+  let tableau = [];
   let multiple;
 
   for (let i = 1; i <= n; i++) {
@@ -96,7 +96,6 @@ export const table = (n) => {
   }
   return tableau;
 }
-
 
 /**
  * Retourne un tableau contenant tous les multiples de n inférieurs ou égaux à limite.
@@ -108,9 +107,18 @@ export const table = (n) => {
  * @example multiplesJusqua(7, 20) → [7, 14]
  */
 export const multiplesJusqua = (n, limite) => {
-  // à compléter
-}
+  let compteur = 1;
+  let multiple;
+  let tableauJ = [];
 
+  while (compteur * n <= limite) {
+      multiple = compteur * n;
+      tableauJ.push(multiple);
+      compteur++;
+  }
+  return tableauJ;
+}
+console.log(multiplesJusqua(7, 20))
 /**
  * [FACULTATIF]
  * Retourne base élevé à la puissance exposant. Sans Math.pow().
