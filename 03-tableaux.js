@@ -26,7 +26,14 @@ export const maximum = (tableau) => {
  * @example minimum([3, 7, 2, 9, 1]) → 1
  */
 export const minimum = (tableau) => {
-  // à compléter
+  let min = tableau[0];
+
+  for (let i = 1; i < tableau.length; i++) {
+    if (tableau[i] < min) {
+      min = tableau[i];
+    }
+  }
+  return min;
 }
 
 /**
@@ -38,7 +45,6 @@ export const minimum = (tableau) => {
 export const moyenne = (tableau) => {
   // à compléter
 }
-
 /**
  * Retourne true si la valeur est présente dans le tableau, false sinon.
  * Sans utiliser .includes().

@@ -18,7 +18,15 @@ describe("maximum", () => {
 // Même pattern qu'maximum — à toi.
 // Cas à couvrir : cas normal, négatifs.
 describe("minimum", () => {
-  // à compléter
+  it("retourne le min", () => {
+    expect(minimum([3, 7, 2, 9, 1])).toBe(1)
+  })
+  it("fonctionne avec un tableau vide", () => {
+    expect(minimum([])).toBe()
+  })
+  it("fonctionne avec des négatifs", () => {
+    expect(minimum([-3, 2, -5, -1])).toBe(-5)
+  })
 })
 
 // Nouveau cas : retourner null. On te montre moyenne en entier.
