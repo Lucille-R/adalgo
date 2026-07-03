@@ -69,9 +69,14 @@ console.log(moyenne([]))
  * @example contient([1, 2, 3], 2) → true / contient([1, 2, 3], 5) → false
  */
 export const contient = (tableau, valeur) => {
-  // à compléter
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      return true;
+    }
+  }
+  return false;
 }
-
+console.log(contient([1, 2, 3], 2))
 /**
  * Retourne le nombre de fois que la valeur apparaît dans le tableau.
  * @param {any[]} tableau

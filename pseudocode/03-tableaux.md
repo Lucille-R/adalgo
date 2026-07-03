@@ -29,6 +29,7 @@ DEBUT
 		FIN SI
 	FIN POUR
 	RETOURNER min
+FIN
 ```
 
 # EXO 3 - moyenne(tableau)
@@ -52,4 +53,22 @@ DEBUT
 		moyenneTab ← total / compteur
 	FIN SI
 	RETOURNER moyenneTab
+FIN
+```
+
+# EXO 4 - contient(tableau, valeur)
+```text
+VARIABLES
+	i, valeur : ENTIER
+	tableau : ENTIER[taille]
+
+DEBUT
+	POUR i ← 0 à taille-1 FAIRE
+	SI tableau[i] == valeur ALORS
+		RETOURNE true
+	SINON
+		RETOURNE false
+	FIN SI
+	FIN POUR
+FIN
 ```
