@@ -6,37 +6,72 @@ import { inverserChaine, estPalindrome, compterVoyelles, capitaliser, tronquer, 
 
 // Cas à couvrir : chaîne normale, chaîne vide.
 describe("inverserChaine", () => {
-  it.todo("à compléter")
+  it("retourne 'ruojnob' pour 'bonjour'", () => {
+    expect(inverserChaine("bonjour")).toBe("ruojnob")
+  })
+  it("retourne '' pour chaine vide", () => {
+    expect(inverserChaine("")).toBe("")
+  })
 })
 
 // Cas à couvrir : palindrome, non-palindrome, un seul caractère.
 describe("estPalindrome", () => {
-  it.todo("à compléter")
+  it("retourne true pour 'kayak'", () => {
+    expect(estPalindrome("kayak")).toBe(true)
+  })
+  it("retourne false pour 'bonjour'", () => {
+    expect(estPalindrome("bonjour")).toBe(false)
+  })
+    it("retourne true pour 'a'", () => {
+    expect(estPalindrome("a")).toBe(true)
+  })
 })
 
 // Cas à couvrir : chaîne avec voyelles, chaîne sans voyelle.
 describe("compterVoyelles", () => {
-  it.todo("à compléter")
+  it("retourne 3 pour 'bonjour'", () => {
+    expect(compterVoyelles("bonjour")).toBe(3)
+  })
+  it("retourne 0 pour 'bcdf'", () => {
+    expect(compterVoyelles("bcdf")).toBe(0)
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.
 describe("capitaliser", () => {
-  it.todo("à compléter")
+  it("retourne 'Bonjour' pour 'boNJOUR'", () => {
+    expect(capitaliser("boNJOUR")).toBe("Bonjour")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne trop longue, chaîne assez courte.
 describe("tronquer", () => {
-  it.todo("à compléter")
+  it("retourne 'bonjour...' pour 'bonjour tout le monde'", () => {
+    expect(tronquer("bonjour tout le monde", 7)).toBe("bonjour...")
+  })
+  it("retourne 'coucou' pour 'coucou'", () => {
+    expect(tronquer("coucou", 7)).toBe("coucou")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : plusieurs mots, deux mots.
 describe("toCamelCase", () => {
-  it.todo("à compléter")
+  it("retourne 'monNomDeVariable' pour 'mon_nom_de_variable'", () => {
+    expect(toCamelCase("mon_nom_de_variable")).toBe("monNomDeVariable")
+  })
+  it("retourne 'helloWorld' pour 'hello_world'", () => {
+    expect(toCamelCase("hello_world")).toBe("helloWorld")
+  })
 })
 
 // [FACULTATIF] Même pattern inverse.
 describe("toSnakeCase", () => {
-  it.todo("à compléter")
+  it("retourne 'mon_nom_de_variable' pour 'monNomDeVariable'", () => {
+    expect(toSnakeCase("monNomDeVariable")).toBe("mon_nom_de_variable")
+  })
+  it("retourne 'hello_world' pour 'helloWorld'", () => {
+    expect(toSnakeCase("helloWorld")).toBe("hello_world")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.

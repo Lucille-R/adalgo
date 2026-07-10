@@ -9,7 +9,7 @@
  * @example inverserChaine("bonjour") → "ruojnob"
  */
 export const inverserChaine = (chaine) => {
-  // à compléter
+  return chaine.split("").reverse("").join("")
 }
 
 /**
@@ -19,7 +19,12 @@ export const inverserChaine = (chaine) => {
  * @example estPalindrome("kayak") → true / estPalindrome("bonjour") → false
  */
 export const estPalindrome = (chaine) => {
-  // à compléter
+  const chaineInversee = chaine.split("").reverse("").join("");
+  if (chaine === chaineInversee) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -29,7 +34,17 @@ export const estPalindrome = (chaine) => {
  * @example compterVoyelles("bonjour") → 3
  */
 export const compterVoyelles = (chaine) => {
-  // à compléter
+
+  let compteur = 0;
+
+  const voyelles = ["a", "e", "i", "o", "u", "y"];
+
+  for (let i = 0; i < chaine.length; i++) {
+    if (voyelles.includes(chaine[i])) {
+      compteur++;
+    }
+  }
+  return compteur;
 }
 
 /**
@@ -40,7 +55,8 @@ export const compterVoyelles = (chaine) => {
  * @example capitaliser("boNJOUR") → "Bonjour"
  */
 export const capitaliser = (chaine) => {
-  // à compléter
+  const chaineMinuscule = chaine.toLowerCase();
+  return chaineMinuscule[0].toUpperCase() + chaineMinuscule.slice(1);
 }
 
 /**
@@ -55,7 +71,12 @@ export const capitaliser = (chaine) => {
  * @example tronquer("coucou", 10) → "coucou"
  */
 export const tronquer = (chaine, longueur) => {
-  // à compléter
+  if (chaine.length > longueur) {
+    const chaineDecoupee = chaine.slice(0, longueur);
+    return chaineDecoupee + "...";
+  } else {
+    return chaine;
+  }
 }
 
 /**
@@ -66,7 +87,17 @@ export const tronquer = (chaine, longueur) => {
  * @example toCamelCase("mon_nom_de_variable") → "monNomDeVariable"
  */
 export const toCamelCase = (str) => {
-  // à compléter
+  // Je découpe la string :
+  const strDecoupee = str.split("_");
+  // Pour chaque mot à partir du 2e, je mets sa 1ère lettre en Maj :
+  const tabMotsMaj = strDecoupee.map(function(mot, index) {
+    if (index === 0) {
+      return mot;
+    } else {
+      return mot[0].toUpperCase() + mot.slice(1);
+    }
+  })
+  return tabMotsMaj.join("");
 }
 
 /**
@@ -77,9 +108,12 @@ export const toCamelCase = (str) => {
  * @example toSnakeCase("monNomDeVariable") → "mon_nom_de_variable"
  */
 export const toSnakeCase = (str) => {
-  // à compléter
+  const strModifiee = str.replace(/[A-Z]/g, function(lettre) {
+    return "_" + lettre.toLowerCase();
+  })
+  return strModifiee;
 }
-
+console.log(toSnakeCase("monNomDeVariable"))
 /**
  * [FACULTATIF]
  * [FACULTATIF]
