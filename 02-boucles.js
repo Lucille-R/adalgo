@@ -8,7 +8,8 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
+  for (let i = 1; i <= n; i++)
+    console.log(i);
 }
 
 /**
@@ -18,7 +19,11 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
 }
 
 /**
@@ -29,7 +34,12 @@ export const afficherPairs = (n) => {
  * @example somme(5) → 15  (1+2+3+4+5)
  */
 export const somme = (n) => {
-  // à compléter
+  let somme = 0;
+
+  for (let i = 1; i <= n; i++) {
+    somme = somme + i;
+  }
+  return somme;
 }
 
 /**
@@ -41,7 +51,12 @@ export const somme = (n) => {
  * @example produit(0) → 1
  */
 export const produit = (n) => {
-  // à compléter
+  let produit = 1;
+
+  for (let i = 1; i <= n; i++) {
+    produit = produit * i;
+  }
+  return produit;
 }
 
 /**
@@ -53,7 +68,14 @@ export const produit = (n) => {
  * @example compterPairs(7)  → 3
  */
 export const compterPairs = (n) => {
-  // à compléter
+  let compteur = 0;
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      compteur = compteur + 1;
+    }
+  }
+  return compteur;
 }
 
 /**
@@ -65,7 +87,14 @@ export const compterPairs = (n) => {
  * @example table(0) → []
  */
 export const table = (n) => {
-  // à compléter
+  let tableau = [];
+  let multiple;
+
+  for (let i = 1; i <= n; i++) {
+    multiple = i * n;
+    tableau.push(multiple);
+  }
+  return tableau;
 }
 
 /**
@@ -78,9 +107,18 @@ export const table = (n) => {
  * @example multiplesJusqua(7, 20) → [7, 14]
  */
 export const multiplesJusqua = (n, limite) => {
-  // à compléter
-}
+  let compteur = 1;
+  let multiple;
+  let tableauJ = [];
 
+  while (compteur * n <= limite) {
+      multiple = compteur * n;
+      tableauJ.push(multiple);
+      compteur++;
+  }
+  return tableauJ;
+}
+console.log(multiplesJusqua(7, 20))
 /**
  * [FACULTATIF]
  * Retourne base élevé à la puissance exposant. Sans Math.pow().
