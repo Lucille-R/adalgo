@@ -50,12 +50,27 @@ FIN
 
 # EXO 4 - capitaliser(chaine)
 ```text
-VARIABLES :reverseBundefined
+VARIABLES :
 	chaine : STRING
 
 DEBUT
 	chaine EN MINUSCULE
 	chaineMinuscule[0] EN MAJUSCULE
+	RETOURNE chaine
+FIN
+```
+
+# EXO 5 - tronquer(chaine, longueur)
+```text
+VARIABLES :
+	chaine, chaineDecoupee : STRING
+	longueur : NUMBER
+
+DEBUT
+	SI longueur chaine > longueur ALORS
+		DECOUPER chaine de 0 à longueur
+		chaine ← chaineDecoupee + ...
+	FIN SI
 	RETOURNE chaine
 FIN
 ```
