@@ -47,3 +47,15 @@ DEBUT
 	RETOURNE compteur
 FIN
 ```
+
+# EXO 4 - capitaliser(chaine)
+```text
+VARIABLES :reverseBundefined
+	chaine : STRING
+
+DEBUT
+	chaine EN MINUSCULE
+	chaineMinuscule[0] EN MAJUSCULE
+	RETOURNE chaine
+FIN
+```

@@ -39,7 +39,9 @@ describe("compterVoyelles", () => {
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.
 describe("capitaliser", () => {
-  it.todo("à compléter")
+  it("retourne 'Bonjour' pour 'boNJOUR'", () => {
+    expect(capitaliser("boNJOUR")).toBe("Bonjour")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne trop longue, chaîne assez courte.
