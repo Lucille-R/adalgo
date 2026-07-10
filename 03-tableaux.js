@@ -9,7 +9,14 @@
  * @example maximum([3, 7, 2, 9, 1]) → 9
  */
 export const maximum = (tableau) => {
-  // à compléter
+  let max = tableau[0];
+
+  for (let i = 1; i < tableau.length; i++) {
+    if (tableau[i] > max) {
+      max = tableau[i];
+    }
+  }
+  return max;
 }
 
 /**
@@ -19,7 +26,14 @@ export const maximum = (tableau) => {
  * @example minimum([3, 7, 2, 9, 1]) → 1
  */
 export const minimum = (tableau) => {
-  // à compléter
+  let min = tableau[0];
+
+  for (let i = 1; i < tableau.length; i++) {
+    if (tableau[i] < min) {
+      min = tableau[i];
+    }
+  }
+  return min;
 }
 
 /**
@@ -29,7 +43,20 @@ export const minimum = (tableau) => {
  * @example moyenne([2, 4, 6]) → 4 / moyenne([]) → null
  */
 export const moyenne = (tableau) => {
-  // à compléter
+  let total = 0;
+  let compteur = 0;
+  let moyenneTab = null;
+
+  for(let i = 0; i < tableau.length; i++) {
+    total = total + tableau[i];
+    compteur++;
+  }
+  if (tableau.length === 0) {
+    return moyenneTab;
+  } else {
+    moyenneTab = total / compteur;
+  }
+  return moyenneTab;
 }
 
 /**
@@ -41,7 +68,12 @@ export const moyenne = (tableau) => {
  * @example contient([1, 2, 3], 2) → true / contient([1, 2, 3], 5) → false
  */
 export const contient = (tableau, valeur) => {
-  // à compléter
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
@@ -52,7 +84,14 @@ export const contient = (tableau, valeur) => {
  * @example compter([1, 2, 2, 3, 2], 2) → 3
  */
 export const compter = (tableau, valeur) => {
-  // à compléter
+  let compteur = 0;
+  
+  for (let i = 0; i < tableau.length; i++) {
+    if (tableau[i] === valeur) {
+      compteur++;
+    }
+  }
+  return compteur;
 }
 
 /**
