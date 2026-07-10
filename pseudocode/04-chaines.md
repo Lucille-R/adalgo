@@ -94,3 +94,15 @@ DEBUT
 	RETOURNER tabMotsMaj
 FIN
 ```
+
+# EXO 7 - toSnakeCase(str)
+```text
+VARIABLES :
+	str : STRING
+
+DEBUT
+	DANS str REMPLACER chaque majuscule PAR "_" + minuscule
+	str ← strModifiee
+	RETOURNER strModifiee
+FIN
+```

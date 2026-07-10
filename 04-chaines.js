@@ -88,16 +88,16 @@ export const tronquer = (chaine, longueur) => {
  */
 export const toCamelCase = (str) => {
   // Je découpe la string :
-  const strDecoupee = str.split("_")
+  const strDecoupee = str.split("_");
   // Pour chaque mot à partir du 2e, je mets sa 1ère lettre en Maj :
   const tabMotsMaj = strDecoupee.map(function(mot, index) {
     if (index === 0) {
       return mot;
     } else {
-      return mot[0].toUpperCase() + mot.slice(1)
+      return mot[0].toUpperCase() + mot.slice(1);
     }
   })
-  return tabMotsMaj.join("")
+  return tabMotsMaj.join("");
 }
 
 /**
@@ -108,9 +108,12 @@ export const toCamelCase = (str) => {
  * @example toSnakeCase("monNomDeVariable") → "mon_nom_de_variable"
  */
 export const toSnakeCase = (str) => {
-  // à compléter
+  const strModifiee = str.replace(/[A-Z]/g, function(lettre) {
+    return "_" + lettre.toLowerCase();
+  })
+  return strModifiee;
 }
-
+console.log(toSnakeCase("monNomDeVariable"))
 /**
  * [FACULTATIF]
  * [FACULTATIF]

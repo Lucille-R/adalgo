@@ -66,7 +66,12 @@ describe("toCamelCase", () => {
 
 // [FACULTATIF] Même pattern inverse.
 describe("toSnakeCase", () => {
-  it.todo("à compléter")
+  it("retourne 'mon_nom_de_variable' pour 'monNomDeVariable'", () => {
+    expect(toSnakeCase("monNomDeVariable")).toBe("mon_nom_de_variable")
+  })
+  it("retourne 'hello_world' pour 'helloWorld'", () => {
+    expect(toSnakeCase("helloWorld")).toBe("hello_world")
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.
