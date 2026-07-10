@@ -74,3 +74,23 @@ DEBUT
 	RETOURNE chaine
 FIN
 ```
+
+# EXO 6 - toCamelCase(str)
+```text
+VARIABLES :
+	str : STRING
+	strDecoupee, tabMotsMaj : STRING[taille]
+
+DEBUT
+	strDecoupee ← DECOUPER str A CHAQUE "_"
+	POUR chaque mot de strDecoupee avec son index FAIRE
+		SI index == 0 ALORS
+			RETOURNER mot
+		SINON
+			RETOURNER mot[0] EN MAJUSCULE + mot DECOUPé à partir de mot[1]
+		FIN SI
+	FIN POUR
+	JOINDRE tabMotsMaj
+	RETOURNER tabMotsMaj
+FIN
+```

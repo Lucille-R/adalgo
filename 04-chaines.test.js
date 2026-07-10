@@ -56,7 +56,12 @@ describe("tronquer", () => {
 
 // [FACULTATIF] Cas à couvrir : plusieurs mots, deux mots.
 describe("toCamelCase", () => {
-  it.todo("à compléter")
+  it("retourne 'monNomDeVariable' pour 'mon_nom_de_variable'", () => {
+    expect(toCamelCase("mon_nom_de_variable")).toBe("monNomDeVariable")
+  })
+  it("retourne 'helloWorld' pour 'hello_world'", () => {
+    expect(toCamelCase("hello_world")).toBe("helloWorld")
+  })
 })
 
 // [FACULTATIF] Même pattern inverse.

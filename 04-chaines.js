@@ -87,7 +87,17 @@ export const tronquer = (chaine, longueur) => {
  * @example toCamelCase("mon_nom_de_variable") → "monNomDeVariable"
  */
 export const toCamelCase = (str) => {
-  // à compléter
+  // Je découpe la string :
+  const strDecoupee = str.split("_")
+  // Pour chaque mot à partir du 2e, je mets sa 1ère lettre en Maj :
+  const tabMotsMaj = strDecoupee.map(function(mot, index) {
+    if (index === 0) {
+      return mot;
+    } else {
+      return mot[0].toUpperCase() + mot.slice(1)
+    }
+  })
+  return tabMotsMaj.join("")
 }
 
 /**
