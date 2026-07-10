@@ -29,7 +29,12 @@ describe("estPalindrome", () => {
 
 // Cas à couvrir : chaîne avec voyelles, chaîne sans voyelle.
 describe("compterVoyelles", () => {
-  it.todo("à compléter")
+  it("retourne 3 pour 'bonjour'", () => {
+    expect(compterVoyelles("bonjour")).toBe(3)
+  })
+  it("retourne 0 pour 'bcdf'", () => {
+    expect(compterVoyelles("bcdf")).toBe(0)
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.

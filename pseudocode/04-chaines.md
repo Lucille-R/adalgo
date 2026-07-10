@@ -23,7 +23,27 @@ DEBUT
 	JOINDRE le tableau
 	chaineInversee ← tableau
 	SI chaine == chaineInversee ALORS
-		estPalindrome == VRAI
+		estPalindrome ← VRAI
+	SINON
+		estPalindrome ← FAUX
 	FIN SI
+FIN
+```
+
+# EXO 3 - compterVoyelles(chaine)
+```text
+VARIABLES :
+	voyelles : STRING [taille]
+	chaine : STRING
+	compteur, i :NUMBER
+
+DEBUT
+	compteur ← 0
+	voyelles ← [a, e, i, o, u, y]
+	POUR i ← 0 à taille.chaine-1 FAIRE
+		SI voyelles INCLUS DANS chaine ALORS
+		compteur++
+	FIN POUR
+	RETOURNE compteur
 FIN
 ```
