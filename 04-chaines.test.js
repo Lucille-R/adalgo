@@ -6,7 +6,12 @@ import { inverserChaine, estPalindrome, compterVoyelles, capitaliser, tronquer, 
 
 // Cas à couvrir : chaîne normale, chaîne vide.
 describe("inverserChaine", () => {
-  it.todo("à compléter")
+  it("retourne 'ruojnob' pour 'bonjour'", () => {
+    expect(inverserChaine("bonjour")).toBe("ruojnob")
+  })
+  it("retourne '' pour chaine vide", () => {
+    expect(inverserChaine("")).toBe("")
+  })
 })
 
 // Cas à couvrir : palindrome, non-palindrome, un seul caractère.

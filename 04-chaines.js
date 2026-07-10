@@ -9,7 +9,7 @@
  * @example inverserChaine("bonjour") → "ruojnob"
  */
 export const inverserChaine = (chaine) => {
-  // à compléter
+  return chaine.split("").reverse("").join("")
 }
 
 /**
