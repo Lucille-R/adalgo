@@ -19,7 +19,12 @@ export const inverserChaine = (chaine) => {
  * @example estPalindrome("kayak") → true / estPalindrome("bonjour") → false
  */
 export const estPalindrome = (chaine) => {
-  // à compléter
+  const chaineInversee = chaine.split("").reverse("").join("");
+  if (chaine === chaineInversee) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**

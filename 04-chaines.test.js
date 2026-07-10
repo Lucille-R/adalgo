@@ -16,7 +16,15 @@ describe("inverserChaine", () => {
 
 // Cas à couvrir : palindrome, non-palindrome, un seul caractère.
 describe("estPalindrome", () => {
-  it.todo("à compléter")
+  it("retourne true pour 'kayak'", () => {
+    expect(estPalindrome("kayak")).toBe(true)
+  })
+  it("retourne false pour 'bonjour'", () => {
+    expect(estPalindrome("bonjour")).toBe(false)
+  })
+    it("retourne true pour 'a'", () => {
+    expect(estPalindrome("a")).toBe(true)
+  })
 })
 
 // Cas à couvrir : chaîne avec voyelles, chaîne sans voyelle.
