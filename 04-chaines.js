@@ -156,5 +156,33 @@ export const validerMotDePasse = (mdp) => {
  * @example analyserTexte("Bonjour monde.") → { lettres: 12, mots: 2, phrases: 1 }
  */
 export const analyserTexte = (texte) => {
-  // à compléter
+  let lettres = 0;
+  let mots = 0;
+  let phrases = 0;
+  let dansMot = false;
+
+  for(let i = 0; i < texte.length; i++) {
+    // On incrémente lettres si le caractère est une lettre
+    // On incrémente mots quand on commence un nouveau mot à chaque "rupture" (donc quand dansMot devient faux)
+    // On incrémente phrases quand le caractère est . ! ou ?
+    const caractere = texte[i];
+    if (/[a-zA-ZÀ-ÿ]/g.test(caractere)) {
+      lettres++;
+      dansMot = true;
+    } else {
+      if (dansMot === true) {
+        mots++;
+      }
+      dansMot = false;
+      if (
+        caractere === "." ||
+        caractere === "!" ||
+        caractere === "?"
+      ) {
+        phrases++;
+      }
+    }
+  }
+
+  return { lettres,mots, phrases }
 }

@@ -125,3 +125,33 @@ DEBUT
 	FIN SI
 FIN
 ```
+
+# EXO 9 - analyserTexte(texte)
+```text
+VARIABLES :
+	texte : STRING
+	lettres, mots, phrases : NUMBERS
+	dansMot : BOOLEAN
+
+DEBUT
+	lettres ← 0
+	mots ← 0
+	phrases ← 0
+	dansMot ← faux
+	POUR i de 0 à taille.texte-1 FAIRE
+		SI texte[i] = lettre FAIRE
+			lettres ← lettres + 1
+			dansMot ← vrai
+		SINON
+			SI dansMot = vrai FAIRE
+				mots ← mots + 1
+				dansMot ← false
+			FIN SI
+			SI texte[i] == "." || texte[i] == "!" || /texte[i] == "?" FAIRE
+				phrases ← phrases + 1
+			FIN SI
+		FIN SI
+	FIN POUR
+	RETOURNE { lettres, mots, phrases }
+FIN
+```
