@@ -113,7 +113,7 @@ export const toSnakeCase = (str) => {
   })
   return strModifiee;
 }
-console.log(toSnakeCase("monNomDeVariable"))
+
 /**
  * [FACULTATIF]
  * [FACULTATIF]
@@ -129,7 +129,18 @@ console.log(toSnakeCase("monNomDeVariable"))
  * @example validerMotDePasse("l#H1@") → false  (trop court)
  */
 export const validerMotDePasse = (mdp) => {
-  // à compléter
+  if (
+    mdp.length >= 6 && 
+    mdp.length <= 12 && 
+    /[a-z]/g.test(mdp) && 
+    /[A-Z]/g.test(mdp) && 
+    /[0-9]/g.test(mdp) && 
+    /[$#@]/g.test(mdp) 
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -145,5 +156,33 @@ export const validerMotDePasse = (mdp) => {
  * @example analyserTexte("Bonjour monde.") → { lettres: 12, mots: 2, phrases: 1 }
  */
 export const analyserTexte = (texte) => {
-  // à compléter
+  let lettres = 0;
+  let mots = 0;
+  let phrases = 0;
+  let dansMot = false;
+
+  for(let i = 0; i < texte.length; i++) {
+    // On incrémente lettres si le caractère est une lettre
+    // On incrémente mots quand on commence un nouveau mot à chaque "rupture" (donc quand dansMot devient faux)
+    // On incrémente phrases quand le caractère est . ! ou ?
+    const caractere = texte[i];
+    if (/[a-zA-ZÀ-ÿ]/g.test(caractere)) {
+      lettres++;
+      dansMot = true;
+    } else {
+      if (dansMot === true) {
+        mots++;
+      }
+      dansMot = false;
+      if (
+        caractere === "." ||
+        caractere === "!" ||
+        caractere === "?"
+      ) {
+        phrases++;
+      }
+    }
+  }
+
+  return { lettres,mots, phrases }
 }

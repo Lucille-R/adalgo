@@ -76,11 +76,27 @@ describe("toSnakeCase", () => {
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.
 describe("validerMotDePasse", () => {
-  it.todo("à compléter")
+  it("retourne true pour 'aBcde1$'", () => {
+    expect(validerMotDePasse("aBcde1$")).toBe(true)
+  })
+  it("retourne false pour mdp trop court", () => {
+    expect(validerMotDePasse("aBc1$")).toBe(false)
+  })
+  it("retourne false pour mdp sans chiffre", () => {
+    expect(validerMotDePasse("aBcdef$")).toBe(false)
+  })
+  it("retourne false pour mdp sans majuscule", () => {
+    expect(validerMotDePasse("abcdef1$")).toBe(false)
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : texte simple, texte vide.
 // Rappel : le résultat est un objet { lettres, mots, phrases } — utilise .toEqual().
 describe("analyserTexte", () => {
-  it.todo("à compléter")
+  it("retourne { lettres: 12, mots: 2, phrases: 1 } pour 'Bonjour monde!'", () => {
+    expect(analyserTexte("Bonjour monde!")).toEqual({ lettres: 12, mots: 2, phrases: 1 })
+  })
+  it("retourne { lettres: 0, mots: 0, phrases: 0 } pour un texte vide", () => {
+    expect(analyserTexte("")).toEqual({ lettres: 0, mots: 0, phrases: 0 })
+  })
 })
