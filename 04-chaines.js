@@ -113,7 +113,7 @@ export const toSnakeCase = (str) => {
   })
   return strModifiee;
 }
-console.log(toSnakeCase("monNomDeVariable"))
+
 /**
  * [FACULTATIF]
  * [FACULTATIF]
@@ -129,7 +129,18 @@ console.log(toSnakeCase("monNomDeVariable"))
  * @example validerMotDePasse("l#H1@") → false  (trop court)
  */
 export const validerMotDePasse = (mdp) => {
-  // à compléter
+  if (
+    mdp.length >= 6 && 
+    mdp.length <= 12 && 
+    /[a-z]/g.test(mdp) && 
+    /[A-Z]/g.test(mdp) && 
+    /[0-9]/g.test(mdp) && 
+    /[$#@]/g.test(mdp) 
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**

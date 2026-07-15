@@ -106,3 +106,22 @@ DEBUT
 	RETOURNER strModifiee
 FIN
 ```
+
+# EXO 8 - validerMotDePasse(mdp)
+```text
+VARIABLES :
+	mdp : STRING
+	
+DEBUT
+	SI mdp > 6 ET
+	mdp < 12 ET
+	mdp CONTIENT majuscule ET
+	mdp CONTIENT minuscule ET
+	mdp CONTIENT chiffre ET
+	mdp CONTIENT [$#@] ALORS
+		RETOURNE vrai
+	SINON
+		RETOURNE faux
+	FIN SI
+FIN
+```

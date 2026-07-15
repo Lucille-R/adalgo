@@ -76,7 +76,18 @@ describe("toSnakeCase", () => {
 
 // [FACULTATIF] Cas à couvrir : valide, trop court, pas de chiffre, pas de majuscule.
 describe("validerMotDePasse", () => {
-  it.todo("à compléter")
+  it("retourne true pour 'aBcde1$'", () => {
+    expect(validerMotDePasse("aBcde1$")).toBe(true)
+  })
+  it("retourne false pour mdp trop court", () => {
+    expect(validerMotDePasse("aBc1$")).toBe(false)
+  })
+  it("retourne false pour mdp sans chiffre", () => {
+    expect(validerMotDePasse("aBcdef$")).toBe(false)
+  })
+  it("retourne false pour mdp sans majuscule", () => {
+    expect(validerMotDePasse("abcdef1$")).toBe(false)
+  })
 })
 
 // [FACULTATIF] Cas à couvrir : texte simple, texte vide.
