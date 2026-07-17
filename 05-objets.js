@@ -9,7 +9,7 @@
  * @example fullName({ prenom: "Ada", nom: "Lovelace" }) → "Ada Lovelace"
  */
 export const fullName = (personne) => {
-  // à compléter
+  return `${personne.prenom} ${personne.nom}`;
 }
 
 /**
