@@ -23,3 +23,17 @@ DEBUT
 	RETOURNER filtreAge
 FIN
 ```
+
+# EXO 3 - trierParNom(personnes)
+```text
+VARIABLES
+	personnes : OBJET[taille]
+	nom : STRING
+	triNom : OBJET[taille]
+
+DEBUT
+	TRIER personnes 
+		RETOURNER ordre alphabétique
+	RETOURNER triNom
+FIN
+```

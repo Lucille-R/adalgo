@@ -37,7 +37,10 @@ export const filtrerParAge = (personnes, ageMin) => {
  *          → [{ nom: "Hopper" }, { nom: "Lovelace" }, { nom: "Turing" }]
  */
 export const trierParNom = (personnes) => {
-  // à compléter
+  let triNom = personnes.sort(function(a, b) {
+    return a.nom.localeCompare(b.nom);
+  });
+  return triNom;
 }
 
 /**

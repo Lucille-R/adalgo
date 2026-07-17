@@ -27,9 +27,18 @@ describe("filtrerParAge", () => {
   })
 })
 
+// EXO 3
 describe("trierParNom", () => {
-  it.todo("à compléter")
+  it("retourne [{ nom: 'Hopper' }, { nom: 'Lovelace' }, { nom: 'Turing' }] pour [{ nom: 'Turing' }, { nom: 'Lovelace' }, { nom: 'Hopper' }]", () => {
+    expect(trierParNom([{ nom: "Turing" }, { nom: "Lovelace" }, { nom: "Hopper" }])).toEqual([{ nom: "Hopper" }, { nom: "Lovelace" }, { nom: "Turing" }])
+  })
+  it("retourne [{ nom: 'Hopper' }] pour [{ nom: 'Hopper' }]", () => {
+    expect(trierParNom([{ nom: "Hopper" }])).toEqual([{ nom: "Hopper" }])
+  })
+  it("retourne [] pour []", () => {
+    expect(trierParNom([])).toEqual([])
 })
+});
 
 // [FACULTATIF]
 describe("grouperParVille", () => {
