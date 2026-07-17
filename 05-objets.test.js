@@ -17,8 +17,14 @@ describe("fullName", () => {
 })
 });
 
+// EXO 2
 describe("filtrerParAge", () => {
-  it.todo("à compléter")
+  it("retourne [{ nom: 'Ada', age: 28 }] pour '[{ nom: 'Ada', age: 28 }, { nom: 'Alan', age: 17 }], 18' ", () => {
+    expect(filtrerParAge([{ nom: 'Ada', age: 28 }, { nom: 'Alan', age: 17 }], 18)).toEqual([{ nom: 'Ada', age: 28 }])
+  })
+  it("retourne [] pour '[{ nom: 'Ada', age: 16 }, { nom: 'Alan', age: 17 }], 18' ", () => {
+    expect(filtrerParAge([{ nom: 'Ada', age: 16 }, { nom: 'Alan', age: 17 }], 18)).toEqual([])
+  })
 })
 
 describe("trierParNom", () => {

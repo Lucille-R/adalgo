@@ -20,9 +20,14 @@ export const fullName = (personne) => {
  * @example filtrerParAge([{ nom: "Ada", age: 28 }, { nom: "Alan", age: 17 }], 18)
  *          → [{ nom: "Ada", age: 28 }]
  */
+
 export const filtrerParAge = (personnes, ageMin) => {
-  // à compléter
+  let filtreAge = personnes.filter(function(personne) {
+    return (personne.age >= ageMin)
+  })
+  return filtreAge;
 }
+
 
 /**
  * Reçoit un tableau de { nom, ... } et retourne le tableau trié par ordre alphabétique du nom.
