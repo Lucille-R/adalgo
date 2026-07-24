@@ -57,7 +57,19 @@ export const trierParNom = (personnes) => {
  * ]) → { Paris: ["Ada", "Grace"], Lyon: ["Alan"] }
  */
 export const grouperParVille = (personnes) => {
-  // à compléter
+  let groupes = {}; // objet vide "à remplir"
+
+  personnes.forEach(function(personne) {
+    // On vérifie si la ville existe déjà :
+    if (groupes[personne.ville] === undefined) {
+      // Undefined : donc la ville n'existe pas, on créé un tableau vide pour cette ville :
+      groupes[personne.ville] = [];
+    }
+    // Le tableau de la ville est créé, on ajoute le nom de la personne :
+    groupes[personne.ville].push(personne.nom);
+  });
+
+  return groupes;
 }
 
 /**

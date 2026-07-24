@@ -40,9 +40,17 @@ describe("trierParNom", () => {
 })
 });
 
-// [FACULTATIF]
+// EXO 4 [FACULTATIF]
 describe("grouperParVille", () => {
-  it.todo("à compléter")
+  it("retourne { Paris: ['Ada', 'Grace'], Lyon: ['Alan'] } pour '[  { nom: 'Ada', ville: 'Paris' },  { nom: 'Alan', ville: 'Lyon' },  { nom: 'Grace', ville: 'Paris' }]'", () => {
+    expect(grouperParVille([{ nom: "Ada", ville: "Paris" }, { nom: "Alan", ville: "Lyon" }, { nom: "Grace", ville: "Paris" }])).toEqual({ Paris: ["Ada", "Grace"], Lyon: ["Alan"] })
+  })
+  it("retourne { Tours: ['Lucille'] } pour [ { nom: 'Lucille', ville: 'Tours' }]", () => {
+    expect(grouperParVille([ { nom: "Lucille", ville: "Tours" }])).toEqual({ Tours: [ 'Lucille' ] })
+  })
+  it("retourne {} pour []", () => {
+    expect(grouperParVille([])).toEqual({})
+  })
 })
 
 // [FACULTATIF]
