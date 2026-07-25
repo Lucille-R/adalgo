@@ -13,7 +13,9 @@
  * ]) → ["Ada", "Augusta", "Grace"]
  */
 export const tousLesPrenoms = (personnes) => {
-  // à compléter
+    return personnes.flatMap((personne) => {
+      return personne.prenoms;
+    });
 }
 
 /**
