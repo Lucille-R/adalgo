@@ -29,7 +29,12 @@ export const tousLesPrenoms = (personnes) => {
  * ]) → [{ nom: "Ada", total: 45 }, { nom: "Grace", total: 24 }]
  */
 export const totalPoints = (etudiantes) => {
-  // à compléter
+  return etudiantes.map((etudiante) => {
+    const total = etudiante.notes.reduce((accumulateur, note) => {
+      return accumulateur + note;
+    }, 0);
+    return { nom: etudiante.nom, total: total}
+  })
 }
 
 /**

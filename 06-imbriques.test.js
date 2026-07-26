@@ -17,18 +17,35 @@ describe("tousLesPrenoms", () => {
   })
 })
 
+// EXO 2 : totalPoints(etudiantes)
 describe("totalPoints", () => {
-  it.todo("à compléter")
+  it("retourne [{ nom: 'Ada', total: 45 }, { nom: 'Grace', total: 24 }] pour [ { nom: 'Ada',   notes: [12, 15, 18] }, { nom: 'Grace', notes: [10, 14] }]", () => {
+    expect(totalPoints([
+      { nom: "Ada",   notes: [12, 15, 18] },
+      { nom: "Grace", notes: [10, 14] }
+     ])).toEqual([{ nom: "Ada", total: 45 }, { nom: "Grace", total: 24 }])
+  })
+  it("retourne [{ nom: 'Ada', total: 0 }] pour [ { nom: 'Ada',   notes: [] }]", () => {
+    expect(totalPoints([
+      { nom: "Ada",   notes: [] },
+     ])).toEqual([{ nom: "Ada", total: 0 }])
+  })
 })
 
+
+// EXO 3 : 
 describe("aMaitriseCompetence", () => {
   it.todo("à compléter")
 })
 
+
+// EXO 4 :
 describe("projetsEnRetard", () => {
   it.todo("à compléter")
 })
 
+
+// EXO 5 :
 describe("resumePromo", () => {
   it.todo("à compléter")
 })
