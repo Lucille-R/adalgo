@@ -13,7 +13,9 @@
  * ]) → ["Ada", "Augusta", "Grace"]
  */
 export const tousLesPrenoms = (personnes) => {
-  // à compléter
+    return personnes.flatMap((personne) => {
+      return personne.prenoms;
+    });
 }
 
 /**
@@ -27,7 +29,12 @@ export const tousLesPrenoms = (personnes) => {
  * ]) → [{ nom: "Ada", total: 45 }, { nom: "Grace", total: 24 }]
  */
 export const totalPoints = (etudiantes) => {
-  // à compléter
+  return etudiantes.map((etudiante) => {
+    const total = etudiante.notes.reduce((accumulateur, note) => {
+      return accumulateur + note;
+    }, 0);
+    return { nom: etudiante.nom, total: total}
+  })
 }
 
 /**
@@ -42,8 +49,15 @@ export const totalPoints = (etudiantes) => {
  * ], "JS") → ["Ada"]
  */
 export const aMaitriseCompetence = (etudiantes, competence) => {
-  // à compléter
+  return etudiantes
+    .filter((etudiante) => {
+      return etudiante.competences.includes(competence);
+    })
+    .map((etudiante) => {
+      return etudiante.nom;
+    });
 }
+
 
 /**
  * [FACULTATIF]
