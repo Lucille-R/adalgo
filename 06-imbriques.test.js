@@ -33,9 +33,26 @@ describe("totalPoints", () => {
 })
 
 
-// EXO 3 : 
+// EXO 3 : aMaitriseCompetence(etudiantes, competence)
 describe("aMaitriseCompetence", () => {
-  it.todo("à compléter")
+  it("retourne ['Ada'] pour ([ { nom: 'Ada',   competences: ['HTML', 'CSS', 'JS'] }, { nom: 'Grace', competences: ['HTML', 'Python'] }], 'JS')", () => {
+    expect(aMaitriseCompetence([
+      { nom: "Ada",   competences: ["HTML", "CSS", "JS"] },
+     { nom: "Grace", competences: ["HTML", "Python"] }
+    ], "JS")).toEqual(["Ada"])
+  })
+  it("retourne [ 'Ada', 'Grace' ] pour ([ { nom: 'Ada',   competences: ['HTML', 'CSS', 'JS'] }, { nom: 'Grace', competences: ['HTML', 'Python'] }], 'HTML')", () => {
+    expect(aMaitriseCompetence([
+      { nom: "Ada",   competences: ["HTML", "CSS", "JS"] },
+      { nom: "Grace", competences: ["HTML", "Python"] }
+    ], "HTML")).toEqual(["Ada", "Grace"])
+  })
+  it("retourne [] pour ([ { nom: 'Ada',   competences: ['HTML', 'CSS', 'JS'] }, { nom: 'Grace', competences: ['HTML', 'Python'] }], 'Java')", () => {
+    expect(aMaitriseCompetence([
+      { nom: "Ada",   competences: ["HTML", "CSS", "JS"] },
+      { nom: "Grace", competences: ["HTML", "Python"] }
+    ], "Java")).toEqual([])
+  })
 })
 
 

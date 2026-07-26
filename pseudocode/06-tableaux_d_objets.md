@@ -29,3 +29,21 @@ DEBUT
 	FIN POUR
 	RETOURNER tabTotal
 ```
+
+# EXO 3 - aMaitriseCompetence(etudiantes, competence)
+```text
+VARIABLES
+	etudiantes : OBJET[taille] {nom, competences}
+	nom : STRING
+	competences : STRING[taille]
+	competence : STRING
+	tabNoms : STRING[taille]
+
+DEBUT
+	FILTRER etudiantes où competences CONTIENT competence
+	POUR chaque etudiante filtrées FAIRE
+		EXTRAIRE etudiante.nom
+	FIN POUR
+	RETOURNER tabNoms
+FIN
+```

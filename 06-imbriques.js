@@ -49,8 +49,15 @@ export const totalPoints = (etudiantes) => {
  * ], "JS") → ["Ada"]
  */
 export const aMaitriseCompetence = (etudiantes, competence) => {
-  // à compléter
+  return etudiantes
+    .filter((etudiante) => {
+      return etudiante.competences.includes(competence);
+    })
+    .map((etudiante) => {
+      return etudiante.nom;
+    });
 }
+
 
 /**
  * [FACULTATIF]
