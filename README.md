@@ -1,46 +1,69 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/tSQIf0KQ)
-# Adalgo
+# 🧮 Adalgo
 
-Projet d'entraînement algorithmique — Ada Tech School · Bloc 1 · S7–S8
+Entraînement à l'algorithmique en JavaScript, avec des tests automatisés.
 
-## Installation
+## 📝 Description
+*Exercices réalisés dans le cadre de la formation Concepteur Développeur d'Applications à Ada Tech School.*
 
-```bash
-npm install
-```
+Une série d'exercices d'algorithmique répartis en 7 chapitres, des conditions jusqu'au tri et à la recherche. Chaque fonction est vérifiée par des tests automatisés écrits avec Jest.
 
-## Lancer les tests
-
-```bash
-npm test
-```
-
-## Mode watch (relance automatique)
-
-```bash
-npm run test:watch
-```
-
-Les tests se relancent automatiquement à chaque sauvegarde. Laisse ce mode tourner pendant que tu codes.
-
-## Workflow
+## 🔁 Méthode de travail
 
 Pour chaque exercice :
 1. Écrire le pseudo-code dans `pseudocode/XX-chapitre.md`
 2. Coder la fonction dans `XX-chapitre.js`
-3. Lancer `npm test` — faire passer les tests au vert
-4. Commit
+3. Lancer les tests et les faire passer au vert
+4. Commiter
 
-## Chapitres
+Chaque chapitre a été développé sur sa propre branche, puis intégré à `main` par une pull request.
 
-| Fichier | Notions | Obligatoires |
+## 📚 Chapitres
+
+| Fichier | Notions | État |
 |---|---|---|
-| `01-conditions.js` | if/else, comparaison, logique | Exos 1 à 4 |
-| `02-boucles.js` | for, while, forEach, accumulation | Exos 1 à 3 |
-| `03-tableaux.js` | indice, .length, filtrage | Exos 1 à 5 |
-| `04-chaines.js` | .length, .split(), .join() | Exos 1 à 3 |
-| `05-objets.js` | propriétés, tableaux d'objets | Exos 1 à 3 |
-| `06-imbriques.js` | objets imbriqués, accès en profondeur | Exos 1 à 3 |
-| `07-tri-recherche.js` | O(n), O(n²), algorithmes classiques | Exos 1 à 3 |
+| `01-conditions.js` | if/else, comparaison, logique | ✅ |
+| `02-boucles.js` | for, while, forEach, accumulation | ✅ |
+| `03-tableaux.js` | indice, .length, filtrage | ✅ |
+| `04-chaines.js` | .length, .split(), .join() | ✅ |
+| `05-objets.js` | propriétés, tableaux d'objets | ✅ |
+| `06-imbriques.js` | objets imbriqués, accès en profondeur | ✅ |
+| `07-tri-recherche.js` | O(n), O(n²), algorithmes classiques | ⏳ En cours |
 
-À la fin des exercices obligatoires d'un chapitre, passe au suivant — les facultatifs sont là si tu es en avance.
+Certains exercices facultatifs restent à faire.
+
+## 🛠️ Technologies utilisées
+- JavaScript (ES Modules)
+- Jest (tests automatisés)
+
+## 🚀 Installation
+
+```bash
+git clone https://github.com/Lucille-R/adalgo.git
+cd adalgo
+npm install
+```
+
+## 🧪 Lancer les tests
+
+Tous les tests :
+```bash
+npm test
+```
+
+Un seul chapitre, par exemple le chapitre 03 :
+```bash
+npm run ch03
+```
+
+Relance automatique à chaque sauvegarde :
+```bash
+npm run test:watch
+```
+
+## 👤 Auteure
+
+- **Lucille Richard** - Étudiante chez Ada Tech School
+
+## 📄 Licence
+
+Projet réalisé dans un cadre pédagogique - Ada Tech School.
